@@ -78,6 +78,11 @@ footer .wrap{padding-block:0}
 .coupon .sent h3{font:400 28px/1.1 var(--game);color:var(--teal);letter-spacing:0;text-transform:none;margin:0 0 6px}
 .coupon .sent p{margin:0}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* Gameplay reel: the owner's own play, muted and looping, a smaller file on phones. */
+.reel{background:var(--goo)}
+.reel .wrap{padding-block:40px}
+.reel video{display:block;width:100%;max-width:100%;aspect-ratio:16/9;background:#000;border-radius:3px;box-shadow:6px 8px 0 rgba(0,0,0,.35)}
+.reel .cap{margin:12px 0 0;font-size:14px;color:#c9bfe0;max-width:none}
 @media (max-width:820px){
   .frame{grid-template-columns:1fr}
   .band{position:static;height:auto;padding:10px 16px;justify-content:flex-start}
@@ -102,6 +107,16 @@ footer .wrap{padding-block:0}
           <a class="pill ghost" href="#game">About the game</a>
           <a class="pill ghost" href="#news">Get news</a>
         </div>
+      </div>
+    </section>
+
+    <section class="reel" aria-label="Gameplay">
+      <div class="wrap">
+        <video autoplay muted loop playsinline preload="auto" poster="video/reel-poster.jpg" aria-label="Moving Oasis gameplay: the water tank sprays goo away under a giant skull, pushes oil off a shoreline, and rain clouds drift over a mushroom city.">
+          <source src="video/reel-480.mp4" type="video/mp4" media="(max-width: 700px)">
+          <source src="video/reel-720.mp4" type="video/mp4">
+        </video>
+        <p class="cap">Development footage, October 2026. Work in progress.</p>
       </div>
     </section>
 
@@ -182,6 +197,10 @@ footer .wrap{padding-block:0}
     </footer>
   </main>
 </div>
+<script>
+// Respect reduced motion: show the poster frame instead of a looping video.
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
+</script>
 <script>
 function ml_webform_success_46906155() {
   var $ = ml_jQuery || jQuery;
