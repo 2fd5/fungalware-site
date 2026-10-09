@@ -5,7 +5,6 @@ Moving Oasis teaser. No build step.
 
 To do before it goes live:
 
-- Add the REGON to the footer once it is assigned (NIP and address are in).
 - GitHub Pages: deploy from `main`, root; `CNAME` holds fungalware.com
   (the domain is at Cloudflare). Pages on a free account needs the repository
   public.
