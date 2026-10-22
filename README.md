@@ -12,3 +12,6 @@ To do before it goes live:
 
 Art: AI-generated key art and logo directed by the developer (see the Moving
 Oasis repository's `assets/title/ART.md`).
+
+`community/forum/<topic>/`: images linked from Steam forum posts
+(`[img]https://fungalware.com/community/forum/...[/img]`); the forum takes links, not uploads.
