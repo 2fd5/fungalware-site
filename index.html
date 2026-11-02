@@ -7,7 +7,7 @@
 <meta name="description" content="Fungalware is a small games studio making strange, hopeful games about living things. Now making Moving Oasis. Wishlist it on Steam.">
 <meta property="og:title" content="Fungalware · Moving Oasis">
 <meta property="og:description" content="Drive a water tank across a world drowned in living goo, and grow it back to life. Wishlist it on Steam.">
-<meta property="og:image" content="img/moving-oasis-wide.jpg">
+<meta property="og:image" content="https://fungalware.com/img/moving-oasis-wide.jpg">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 /* Layout: a grey cartridge band down the left edge (the box art's FUNGALWARE
@@ -93,11 +93,15 @@ footer .wrap{padding-block:0}
 .player .dots button{width:12px;height:12px;padding:0;border:2px solid var(--cream);border-radius:50%;background:transparent;cursor:pointer}
 .player .dots button[aria-selected=true]{background:var(--cream)}
 .reel .cap{margin:12px 0 0;font-size:14px;color:#c9bfe0;max-width:none}
+/* Screenshots: fresh captures from the game, no HUD. */
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.shots img{display:block;width:100%;height:auto;border-radius:3px}
 @media (max-width:820px){
   .frame{grid-template-columns:1fr}
   .band{position:static;height:auto;padding:10px 16px;justify-content:flex-start}
   .band span{writing-mode:horizontal-tb;transform:none;font-size:26px}
   .game,.studio .cols,.news .wrap{grid-template-columns:1fr}
+  .shots{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero img.art{height:62vh}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -122,13 +126,13 @@ footer .wrap{padding-block:0}
 
     <section class="reel" aria-label="Gameplay">
       <div class="wrap">
-        <div class="player" data-clips="rain-cities skull shore">
-          <video autoplay muted playsinline preload="auto" poster="video/rain-cities.jpg" aria-label="Moving Oasis gameplay, development footage"></video>
+        <div class="player" data-clips="night green battle dawn">
+          <video autoplay muted playsinline preload="auto" poster="video/night.jpg" aria-label="Moving Oasis gameplay, development footage"></video>
           <button class="nav prev" type="button" aria-label="Previous clip">&#8249;</button>
           <button class="nav next" type="button" aria-label="Next clip">&#8250;</button>
           <div class="dots" role="tablist" aria-label="Clips"></div>
         </div>
-        <p class="cap">Development footage, October 2026. Work in progress.</p>
+        <p class="cap">Gameplay from the current build, November 2026. Work in progress.</p>
       </div>
     </section>
 
@@ -147,6 +151,17 @@ footer .wrap{padding-block:0}
         </ul>
       </div>
       <img class="tall" src="img/moving-oasis-tall.jpg" alt="Moving Oasis key art: the teal tank up close, its headlights like friendly eyes, spraying goo back beside mushroom towers and a rusty ship.">
+    </section>
+
+    <section class="wrap" aria-label="Screenshots">
+      <div class="shots">
+        <img src="img/screens/night-hit.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="At night the tank sprays a long arc of water into glowing red goo creatures around a mushroom town.">
+        <img src="img/screens/city-wakes.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="The tank waters a mushroom town in the sand as green rings spread out from it.">
+        <img src="img/screens/fox-beetles.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Water runs from an oasis pool past a fennec fox and green beetles carrying a flask.">
+        <img src="img/screens/dawn-line.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="The line of dawn sweeps across the map, lighting a huge stone head while goo creatures still glow in the dark.">
+        <img src="img/screens/calm-birds.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="By day a flock of birds has returned to the oasis pool beside a mushroom town.">
+        <img src="img/screens/peak.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Goo creatures and glowing pods surround a mushroom town at night while the tank fights them off.">
+      </div>
     </section>
 
     <section id="news" class="news">
